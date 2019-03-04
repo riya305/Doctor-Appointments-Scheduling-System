@@ -24,7 +24,3 @@ Implement the following functionality:
 * Find a doctor's working hours
 * Book an doctor opening
 * Create and update the list of doctor's working hours
-
-## Deliverables
-
-The code should be delivered as a library that anyone can import and use. It should contain documentation and unit tests that show your understanding of the problem. Once you&#39;re finished, submit a PR to this repo.
