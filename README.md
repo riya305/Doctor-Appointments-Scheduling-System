@@ -4,7 +4,7 @@
 
 A busy hospital has a list of dates that a doctor is available to see patients. Their process is manual and error prone leading to overbooking. They also have a hard time visualizing all of the available time for a doctor for specific dates. 
 
-## Interview Task
+## Task
 
 Create a REST API that enables a simple scheduling system that manages doctor availabilities and allows patients to book appointments.
 

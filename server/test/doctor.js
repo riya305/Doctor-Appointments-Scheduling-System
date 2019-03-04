@@ -1,24 +1,24 @@
 let mongoose = require("mongoose");
-let Book = require('../app/models/book');
+let Booking = require('../models/booking');
 
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let server = require('../server');
+let server = require('../../app');
 let should = chai.should();
 
 
 chai.use(chaiHttp);
 
-describe('Books', () => {
+describe('Bookings', () => {
     beforeEach((done) => {
-        Book.remove({}, (err) => { 
+        Booking.remove({}, (err) => { 
            done();           
         });        
     });
-  describe('/GET book', () => {
-      it('it should GET all the books', (done) => {
+  describe('/GET booking', () => {
+      it('it should GET all the bookings', (done) => {
         chai.request(server)
-            .get('/book')
+            .get('/getBookingsList')
             .end((err, res) => {
                   res.should.have.status(200);
                   res.body.should.be.a('array');
@@ -30,22 +30,23 @@ describe('Books', () => {
   /*
   * Test the /POST route
   */
-  describe('/POST book', () => {
-      it('it should not POST a book without pages field', (done) => {
-          let book = {
-              title: "The Lord of the Rings",
-              author: "J.R.R. Tolkien",
-              year: 1954
-          }
+  describe('/POST booking', () => {
+      it('it should not POST a booking without pages field', (done) => {
+          let booking = {
+            doc_id:"5c7d5fc1b63e5c14bc737053",
+            pat_id:"5c7d605dbdf508166faaeb6e",
+            day:"Monday",
+            slot:"18-19"
+        }
         chai.request(server)
-            .post('/book')
-            .send(book)
+            .post('/booking')
+            .send(booking)
             .end((err, res) => {
                   res.should.have.status(200);
                   res.body.should.be.a('object');
                   res.body.should.have.property('errors');
-                  res.body.errors.should.have.property('pages');
-                  res.body.errors.pages.should.have.property('kind').eql('required');
+                  res.body.errors.should.have.property('day');
+                  res.body.errors.pages.should.have.property('slot').eql('18-19');
               done();
             });
       });
