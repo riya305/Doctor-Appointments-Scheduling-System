@@ -1,0 +1,22 @@
+{
+  "name": "luma-eng-interview",
+  "version": "1.0.0",
+  "description": "Luma Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumahealthhq/luma-eng-interview.git"
+  },
+  "author": "Riya Saxena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lumahealthhq/luma-eng-interview/issues"
+  },
+  "engines": {
+    "node": ">=v8.10.0"
+  },
+  "homepage": "https://github.com/lumahealthhq/luma-eng-interview#readme"
+}
