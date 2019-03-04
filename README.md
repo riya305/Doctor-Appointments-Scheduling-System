@@ -21,5 +21,3 @@ Creates REST APIs that enables a simple scheduling system that manages doctor av
 * Find a doctor's working hours
 * Book an doctor opening
 * Create and update the list of doctor's working hours
-
-## Deliverables
