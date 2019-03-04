@@ -1,4 +1,4 @@
-# Luma Technical Interview
+# Appointment Scheduling
 
 ## Problem Definition
 
