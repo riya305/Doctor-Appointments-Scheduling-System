@@ -18,9 +18,8 @@ const bookingSchema = new mongoose.Schema({
   },
   timings: [
   {
-	  startHour: String,
-	  endHour: String,
-    day: String
+	  day: String,
+	  slot: String
 	}
   ],
 });
